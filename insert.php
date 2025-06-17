@@ -22,6 +22,7 @@ if ($role !== 'student' && $role !== 'lecturer') {
 }
 
 $sql = "INSERT INTO users (matric, name, password, role) VALUES (?, ?, ?, ?)";
+
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssss", $matric, $name, $password, $role);
 
